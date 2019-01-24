@@ -1,0 +1,11 @@
+package com.company;
+
+/**
+ * Created by 04585cut on 17/01/2019.
+ */
+public interface Interface {
+
+    void setState();
+
+    String getState();
+}
