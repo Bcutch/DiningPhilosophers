@@ -1,0 +1,162 @@
+package com.company;
+
+/**
+ * Created by 04585cut on 17/01/2019.
+ */
+public class Philosopher implements Interface {
+
+    // I realize now that I don't have to do
+    // all this but by the time I realized I
+    // had already done it, so I kept it in.
+
+
+    private boolean first = false;
+    private boolean second = false;
+    private boolean third = false;
+    private boolean fourth = false;
+    private boolean fifth = false;
+    private boolean sixth = false;
+    private boolean seventh = false;
+    private boolean eighth = false;
+    private boolean ninth = false;
+    private boolean tenth = false;
+
+    private String firstName = null;
+    private String secondName = null;
+    private String thirdName = null;
+    private String fourthName = null;
+    private String fifthName = null;
+    private String sixthName = null;
+    private String seventhName = null;
+    private String eighthName = null;
+    private String ninthName = null;
+    private String tenthName = null;
+
+
+    Philosopher (int num) {
+        switch (num) {
+            case 0: {
+                first = true;
+                break;
+            }
+            case 1: {
+                second = true;
+                break;
+            }
+            case 2: {
+                third = true;
+                break;
+            }
+            case 3: {
+                fourth = true;
+                break;
+            }
+            case 4: {
+                fifth = true;
+                break;
+            }
+            case 5: {
+                sixth = true;
+                break;
+            }
+            case 6: {
+                seventh = true;
+                break;
+            }
+            case 7: {
+                eighth = true;
+                break;
+            }
+            case 8: {
+                ninth = true;
+                break;
+            }
+            case 9: {
+                tenth = true;
+                break;
+            }
+
+        }
+    }
+
+    public void setName (String Name) {
+        if (first) {
+            firstName = Name;
+        }
+        if (second) {
+            secondName = Name;
+        }
+        if (third) {
+            thirdName = Name;
+        }
+        if (fourth) {
+            fourthName = Name;
+        }
+        if (fifth) {
+            fifthName = Name;
+        }
+        if (sixth) {
+            sixthName = Name;
+        }
+        if (seventh) {
+            seventhName = Name;
+        }
+        if (eighth) {
+            eighthName = Name;
+        }
+        if (ninth) {
+            ninthName = Name;
+        }
+        if (tenth) {
+            tenthName = Name;
+        }
+    }
+
+    public String getName () {
+
+        String rVal = null;
+
+        if (first) {
+            rVal = firstName;
+        }
+        if (second) {
+            rVal = secondName;
+        }
+        if (third) {
+            rVal = thirdName;
+        }
+        if (fourth) {
+            rVal = fourthName;
+        }
+        if (fifth) {
+            rVal = fifthName;
+        }
+        if (sixth) {
+            rVal = sixthName;
+        }
+        if (seventh) {
+            rVal = seventhName;
+        }
+        if (eighth) {
+            rVal = eighthName;
+        }
+        if (ninth) {
+            rVal = ninthName;
+        }
+        if (tenth) {
+            rVal = tenthName;
+        }
+
+        return rVal;
+    }
+
+    public void setState() {
+
+    }
+
+    public String getState() {
+        return "hi";
+    }
+
+
+}
