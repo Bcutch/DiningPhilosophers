@@ -14,12 +14,15 @@ public class Main {
         String fileName = scan.next();
 
         int numOfPhils = 0;
+        String battleName;
+
+        String[] names = null;
+        File file = new File(fileName);
+        Scanner scanFile = null;
 
         try {
-            File file = new File(fileName);
-            Scanner scanFile = new Scanner(file);
 
-            numOfPhils = scanFile.nextInt();
+            scanFile = new Scanner(file);
         }
         catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -27,8 +30,56 @@ public class Main {
             System.exit(0);
         }
 
-        Philosopher[] object; 
+        numOfPhils = scanFile.nextInt();
 
+        battleName = scanFile.next();
+
+        names = new String[numOfPhils];
+
+        for (int i = 0; i < numOfPhils; i++) {
+            names[i] = scanFile.next();
+        }
+
+        Philosopher[] object = new Philosopher[numOfPhils];
+
+        for (int i = 0; i < numOfPhils; i++) {
+            object[i] = new Philosopher(i);
+        }
+
+        for (int i = 0; i < numOfPhils; i++) {
+            object[i].setName(names[i]);
+        }
+
+        Random random = new Random();
+
+        int r = random.nextInt(numOfPhils) + 1;
+
+        int[] forks = new int[numOfPhils];
+
+        for (int i = 0; i < numOfPhils; i++) {
+            forks[i] = 1;
+        }
+
+        int sum;
+        boolean done = false;
+
+        while (!done) {
+
+            sum = 0;
+
+            for (int i = 0; i < numOfPhils; i++) {
+                sum += forks[i];
+            }
+
+            if (sum < 1) {
+                if (!object[r].getState().equals("DEAD")) {
+                    
+                }
+            }
+            else {
+                done = true;
+            }
+        }
 
     }
 }
