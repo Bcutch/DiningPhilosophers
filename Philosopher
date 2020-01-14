@@ -7,7 +7,7 @@ public class Philosopher implements Interface {
 
     // I realize now that I don't have to do
     // all this but by the time I realized I
-    // had already done it, so I kept it in.
+    // had already done it, so I kept it in. _/('_')\_
 
 
     private boolean first = false;
